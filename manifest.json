@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Afterglow",
+  "version": "1.0.0",
+  "description": "A small, local loading screen for page navigation.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_title": "Afterglow",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["presets.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

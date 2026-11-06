@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afterglow</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <div><h1>Afterglow</h1><p>A little pause between pages</p></div>
+      </div>
+      <label class="switch" title="Enable or disable Afterglow">
+        <input id="enabled" type="checkbox" aria-label="Enable Afterglow">
+        <span class="switch-track"><span></span></span>
+      </label>
+    </header>
+    <section class="presets" aria-labelledby="preset-heading">
+      <div class="section-heading"><h2 id="preset-heading">Choose a screen</h2><span>5 presets</span></div>
+      <div id="preset-list" class="preset-list" role="group" aria-label="Loading screen presets"></div>
+    </section>
+    <footer><span class="status-dot" aria-hidden="true"></span><span id="status">Ready when you are</span></footer>
+  </main>
+  <script src="presets.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
